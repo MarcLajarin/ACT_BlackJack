@@ -7,7 +7,7 @@
 #define MAX_HAND 10
 
 char *values[] = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
-char *suits[] = {"Corazones", "Diamantes", "Picas", "Tréboles"};
+char *suits[] = {"Corazones", "Diamantes", "Picas", "Treboles"};
 
 struct carta {
     char *value;
@@ -75,17 +75,19 @@ int main() {
                 printf("  %s de %s\n", playerHand[i].value, playerHand[i].suit);
             }
             printf("Suma total: %d\n", playerSum);
-        } else {
+        }
+        else {
             break;
         }
     }
+
 
     if (playerSum == 21) {
         printf("¡Blackjack! Has ganado.\n");
     } else if (playerSum > 21) {
         printf("Te has pasado. Fin del juego.\n");
     } else {
-        printf("Te has plantado con %d. Fin del juego.\n", playerSum);
+        printf("Te has plantado. BIEN JUGADO.\n");
     }
 
     return 0;
